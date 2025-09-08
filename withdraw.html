@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Withdraw Money</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      background: #dc3545;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #a71d2a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Withdraw Request</h1>
+    <input type="text" id="amount" placeholder="Enter Amount">
+    <input type="text" id="account" placeholder="Enter Bank Account / UPI ID">
+    <button onclick="submitWithdraw()">Submit</button>
+  </div>
+
+  <script>
+    function submitWithdraw() {
+      const amt = document.getElementById("amount").value.trim();
+      const acc = document.getElementById("account").value.trim();
+      if (amt === "" || acc === "") {
+        alert("Please enter all details!");
+        return;
+      }
+      alert("Withdraw Request Submitted!\nAmount: ₹" + amt + "\nAccount/UPI: " + acc);
+      window.location.href = "index.html"; // back to home
+    }
+  </script>
+</body>
+</html>
