@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Money</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Add Money</h1>
+    <p id="selected-plan">Plan Amount: </p>
+    <input type="text" id="utr" placeholder="Enter UTR Number">
+    <button onclick="submitUTR()">Submit</button>
+  </div>
+
+  <script>
+    // Plan amount from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const amount = urlParams.get("amount");
+    document.getElementById("selected-plan").textContent = "Plan Amount: ₹" + amount;
+
+    // On submit
+    function submitUTR() {
+      const utr = document.getElementById("utr").value.trim();
+      if (utr === "") {
+        alert("Please enter a valid UTR number!");
+        return;
+      }
+      alert("UTR Submitted Successfully!\nPlan Amount: ₹" + amount + "\nUTR: " + utr);
+      window.location.href = "index.html"; // redirect back to home
+    }
+  </script>
+</body>
+</html>
