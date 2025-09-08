@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>31HUP - Investment Plans</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .plan {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Plan</h1>
+    <div class="plan">₹1000 → Profit 10% <br><button onclick="goToAddMoney(1000)">Add Money</button></div>
+    <div class="plan">₹2000 → Profit 10% <br><button onclick="goToAddMoney(2000)">Add Money</button></div>
+    <div class="plan">₹5000 → Profit 10% <br><button onclick="goToAddMoney(5000)">Add Money</button></div>
+    <div class="plan">₹10000 → Profit 10% <br><button onclick="goToAddMoney(10000)">Add Money</button></div>
+    <div class="plan">₹20000 → Profit 10% <br><button onclick="goToAddMoney(20000)">Add Money</button></div>
+  </div>
+
+  <script>
+    function goToAddMoney(amount) {
+      window.location.href = "addmoney.html?amount=" + amount;
+    }
+  </script>
+</body>
+</html>
