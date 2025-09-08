@@ -42,6 +42,13 @@
     button:hover {
       background: #0056b3;
     }
+    .withdraw-btn {
+      background: #dc3545;
+      margin-top: 20px;
+    }
+    .withdraw-btn:hover {
+      background: #a71d2a;
+    }
   </style>
 </head>
 <body>
@@ -52,11 +59,17 @@
     <div class="plan">₹5000 → Profit 10% <br><button onclick="goToAddMoney(5000)">Add Money</button></div>
     <div class="plan">₹10000 → Profit 10% <br><button onclick="goToAddMoney(10000)">Add Money</button></div>
     <div class="plan">₹20000 → Profit 10% <br><button onclick="goToAddMoney(20000)">Add Money</button></div>
+
+    <!-- Withdraw button -->
+    <button class="withdraw-btn" onclick="goToWithdraw()">Withdraw Money</button>
   </div>
 
   <script>
     function goToAddMoney(amount) {
       window.location.href = "addmoney.html?amount=" + amount;
+    }
+    function goToWithdraw() {
+      window.location.href = "withdraw.html";
     }
   </script>
 </body>
