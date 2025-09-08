@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>31HUP - Welcome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0a192f;
+      color: #fff;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "plans.html";
+    }, 3000); // 3 seconds baad plans page open hoga
+  </script>
+</head>
+<body>
+  <h1>Welcome to 31HUP</h1>
+</body>
+</html>
